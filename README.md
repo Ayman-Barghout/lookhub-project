@@ -2,6 +2,8 @@
 
 A web app created for github users, especially beginners who are looking to contribute in open source.
 
+You can check it out on [HerokuApp](https://lookhub.herokuapp.com)
+
 ## Features
 
 -   Look-up users by name.
