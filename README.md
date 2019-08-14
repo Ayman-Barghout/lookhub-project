@@ -15,7 +15,7 @@ A web app created for github users, especially beginners who are looking to cont
 ## Checklist
 
 -   [x] Get user search done.
--   [ ] Add a way to view a snap of users' profile.
+-   [x] Add a snap of users' profile.
 -   [x] Refactor the project to use Hooks.
 -   [ ] Create issues search functionality for certain beginner-friendly labels.
 -   [ ] Add languages drop down for users to pick their favorite language to contribute with.

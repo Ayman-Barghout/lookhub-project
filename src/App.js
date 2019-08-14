@@ -13,6 +13,7 @@ import './App.css';
 const App = () => {
 	const [users, setUsers] = useState([]);
 	const [user, setUser] = useState({});
+	const [userRepos, setUserRepos] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [alert, setAlert] = useState(null);
 
@@ -40,6 +41,17 @@ const App = () => {
 		setUser(res.data);
 	};
 
+	const getUserRepos = async username => {
+		setLoading(true);
+		const res = await axios.get(
+			`https://api.github.com/users/${username}/repos?&client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${
+				process.env.GITHUB_CLIENT_SECRET
+			}`
+		);
+		setLoading(false);
+		setUserRepos(res.data);
+	}
+
 	const clearUsers = () => {
 		setUsers([]);
 		setLoading(false);
@@ -57,7 +69,6 @@ const App = () => {
 		<Router>
 			<div className='App'>
 				<Navbar icon='fab fa-github' title='LookHub' />
-				<div className='container'>
 					<Alert alert={alert} />
 					<Switch>
 						<Route
@@ -79,10 +90,9 @@ const App = () => {
 						<Route
 							exact
 							path='/user/:login'
-							render={props => <User {...props} getUser={getUser} user={user} loading={loading} />}
+							render={props => <User {...props} getUser={getUser} getUserRepos={getUserRepos} userRepos={userRepos} user={user} loading={loading} />}
 						/>
 					</Switch>
-				</div>
 			</div>
 		</Router>
 	);

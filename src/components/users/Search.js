@@ -19,6 +19,8 @@ const Search = props => {
 	};
 
 	return (
+		<div className="container">
+
 		<div>
 			<form onSubmit={onSubmit} className='form'>
 				<input
@@ -35,6 +37,7 @@ const Search = props => {
 					Clear
 				</button>
 			)}
+		</div>
 		</div>
 	);
 };

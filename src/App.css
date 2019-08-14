@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Poppins:500,600,700&display=swap');
 
 /* General Styles */
 
@@ -17,7 +17,7 @@
 }
 
 body {
-	font-family: 'Roboto', 'sans-serif';
+	font-family: 'Poppins', 'sans-serif';
 	font-size: 1rem;
 	line-height: 1.6;
 	background-color: #fff;
@@ -368,7 +368,6 @@ table th {
 	z-index: 1;
 	width: 100%;
 	opacity: 0.9;
-	margin-bottom: 1rem;
 }
 
 .navbar ul {
@@ -388,6 +387,88 @@ table th {
 .navbar .welcome span {
 	margin-right: 0.6rem;
 }
+
+/* Profile styles */
+
+.info-wrapper {
+	position: relative;
+	color: white;
+}
+
+.info-section {
+	background: var(--primary-color);
+	width: 100vw;
+	height: 45vh;
+	padding: 5%;
+}
+
+.info-section .info-name {
+	margin-top: -4%;
+	margin-bottom: 2%;
+	font-size: 2rem;
+}
+
+.info-section .info-subinfo i {
+	margin: 0.5rem 0.5rem;
+}
+
+.avatar-img {
+    background: var(--primary-color);
+	border: 3px solid white;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    position: absolute;
+    width: calc( calc(0.15 * 100vh) + 5vw);
+    top: 30vh;
+    left: 3vw;
+}
+
+.github-btn {
+    color:  var(--dark-color);
+	background: var(--light-color);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border: 3px solid white;
+    border-radius: 20px;
+    left: 80vw;
+	top: 42vh;
+	font-size: 2rem;
+    position: absolute;
+}
+
+.bio-section {
+	width: 62%;
+	margin: 0 auto;
+	padding-top: 3%;
+}
+
+.stats-section {
+	width: 62%;
+	margin: 0 auto;
+	padding-top: 3%;
+}
+
+.stats-section > h4 {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+}
+
+.stats-info {
+	display: flex;
+	flex-wrap: wrap;
+    border: 4px solid rgba(15%, 33%, 49%, 50%);
+	border-radius: 8px;
+	justify-content: space-around;
+    padding: 3%;
+}
+
+.stats-info-item {
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+.stats-info-item i {
+	color: var(--primary-color);
+}
+
 
 /* Mobile Styles */
 @media (max-width: 700px) {
@@ -423,5 +504,24 @@ table th {
 	.navbar ul {
 		text-align: center;
 		justify-content: center;
+	}
+
+	.info-section {
+		clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+	}
+
+	.github-btn {
+		top: 30vh;
+	}
+
+	.bio-section {
+		width: 100%;
+		margin: 0;
+		padding: 10% 3%;
+	}
+
+	.stats-info-item {
+		flex: 0 50%;
+		padding-top: 4%;
 	}
 }
