@@ -11,6 +11,7 @@ A web app created for github users, especially beginners who are looking to cont
 ## Currently working
 
 1. Users search by username.
+2. Users can view a snap of the user's profile.
 
 ## Checklist
 
