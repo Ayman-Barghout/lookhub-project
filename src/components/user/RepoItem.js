@@ -14,7 +14,7 @@ const RepoItem = ({ repo }) => {
     <div className="repo-item">
       <div className="repo-item-header">
         <h5>
-          <a href={html_url} target="_blank">
+          <a href={html_url} rel="noopener noreferrer" target="_blank">
             {name.replace(/[_-]/g, ' ')}
           </a>
         </h5>

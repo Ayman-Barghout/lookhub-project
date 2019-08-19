@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import PropTypes from "prop-types";
 import Alert from "../layout/Alert";
 import Search from "../users/Search";
 import UsersComponent from "../users/Users";

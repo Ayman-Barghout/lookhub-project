@@ -54,14 +54,17 @@ const User = ({ match }) => {
           <h4 className="info-subinfo">
             <i className="fas fa-map-marker-alt" />{" "}
             {location !== null ? location : "N/A"}
-          </h4>{" "}
+          </h4>
+          <h4 className="info-subinfo">
+            {hireable ? <i className="fas fa-check"></i> : <i className="fas fa-times"></i>} Hireable
+          </h4>
         </div>
         <img
           className="img round-img avatar-img"
           src={avatar_url}
           alt="User's avatar"
         />
-        <a href={html_url} target="_blank">
+        <a href={html_url} rel="noopener noreferrer" target="_blank">
           <i className="fab fa-github github-btn" />
         </a>
       </div>
