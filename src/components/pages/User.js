@@ -19,7 +19,7 @@ const User = ({ match }) => {
 
   const getUserRepos = async username => {
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?sort=stars&client_id=${
+      `https://api.github.com/users/${username}/repos?sort=pushed&direction=desc&client_id=${
         process.env.GITHUB_CLIENT_ID
       }&client_secret=${process.env.GITHUB_CLIENT_SECRET}`
     );

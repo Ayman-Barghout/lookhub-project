@@ -481,8 +481,8 @@ table th {
 }
 
 .repo-item {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 0.3fr;
 	flex-wrap: wrap;
 	border: 2px solid #26547c;
 	border-radius: 8px;
@@ -490,15 +490,18 @@ table th {
 	margin: 2% 0;
 }
 
+.repo-item-header {
+	width: 90%;
+}
+
 .repo-item h5 {
 	font-size: 1.1rem;
-	flex: 1;
 }
 
 .repo-item p {
 	color: #707070;
 	font-size: 0.9rem;
-	flex: 1;
+	word-wrap: break-word;
 }
 
 .repo-item span{
@@ -569,5 +572,18 @@ table th {
 	.stats-info-item {
 		flex: 0 50%;
 		padding-top: 4%;
+	}
+
+	.repo-section {
+		width: 100%;
+		margin: 0;
+	}
+	.repo-item {
+		grid-template-columns: none;
+		grid-template-rows: 1fr 0.5fr;
+	}
+
+	.repo-item-info {
+		flex-direction: row;
 	}
 }

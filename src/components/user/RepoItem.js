@@ -15,10 +15,10 @@ const RepoItem = ({ repo }) => {
       <div className="repo-item-header">
         <h5>
           <a href={html_url} target="_blank">
-            {name}
+            {name.replace(/[_-]/g, ' ')}
           </a>
         </h5>
-        {description && <p><i className="fas fa-info-circle"></i> {description}</p>}
+        {description && <p><i className="fas fa-info-circle"></i> {description.replace(/[_-]/g, ' ')}</p>}
         <p><i className="fas fa-calendar-day"></i> {new Date(created_at).toDateString()}</p>
       </div>
       <div className="repo-item-info">

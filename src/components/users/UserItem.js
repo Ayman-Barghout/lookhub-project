@@ -7,7 +7,7 @@ const UserItem = ({ user: { login, avatar_url } }) => {
 		<div className='card text-center'>
 			<img src={avatar_url} alt='' className='round-img' style={{ width: '60px' }} />
 			<h3>{login}</h3>
-			<Link to={`/user/${login}`} className='btn btn-dark btn-sm'>
+			<Link to={`/users/user/${login}`} className='btn btn-dark btn-sm'>
 				View
 			</Link>
 		</div>

@@ -52,9 +52,4 @@ const Users = () => {
   );
 };
 
-Users.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  users: PropTypes.array.isRequired
-};
-
 export default Users;
